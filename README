@@ -1,1 +1,23 @@
-Woooooo
+from gpiozero import DistanceSensor, PWMLED
+from time import sleep
+from signal import pause
+
+sensor = DistanceSensor(echo=23, trigger=24, max_distance=2.0)
+
+led = PWMLED(14)
+while True:
+    if sensor.distance * 100 > 10.00 and sensor.distance * 100 < 20:
+        led.on()
+    elif sensor.distance * 100 < 5.00:
+        led.pulse()
+    elif sensor.distance * 100 >= 20.00:
+        led.off()
+    sleep(0.25)
+
+
+
+USES:
+
+Parking sensor, the different stages of the light will signal to you how close you are.
+
+Security cam, the light can turn on or react depending on the situation like how close someone is.
