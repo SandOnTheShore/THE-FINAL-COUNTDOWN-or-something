@@ -1,3 +1,29 @@
+Hello!
+
+The purpose of this project is to create a sensor that displays a different light pattern depending on the distance an object is, within a certain range.
+
+PI/Breadboard setup:
+
+You will need ONE ultrasonic distance sensor, TWO ground wires, FOUR normal wires, THREE resistors and ONE light.
+
+Set up your sensor on one of the four courners of the breadboard and connect the necessary wiring according to the ultrasonic distance sensors needs. For example you'll need a ground wire, a regular wire connecting the ECHO to the Rasberry Pi and another wire connecting the
+TRIGGER to the Raspberry Pi.
+
+You will need two resistors to ensure the current is managed, otherwise you could fry your Raspberry Pi. For this project I used ONE 330 Ω resistors, ONE 571 Ω resistors and ONE 220 Ω resistor.
+
+Your 571 Ω resistor will be connected to the ground wire for your distance sensor
+
+Your 330 Ω reistor will be connected to the ECHO on your distance sensor
+
+Your light will need it's own GROUND wire, REGULAR wire and a 220 Ω resistor
+
+After you've connected everything to the appropriate places according to your Raspberry Pi. It's time to do the coding.
+
+
+
+
+
+
 from gpiozero import DistanceSensor, PWMLED
 from time import sleep
 
@@ -14,19 +40,10 @@ while True:
     sleep(0.25)
 
 
-PI/Breadboard setup:
-
-You will need ONE ultrasonic distance sensor, TWO ground wires, FOUR normal wires, THREE resistors and ONE light.
-
-Set up your light towards one of the four courners of the breadboard and connect the necessary wiring according to the ultrasonic distance sensors needs.
-
-You'll also need one resistor, one normal wire and one ground wire for the light.
-
-After you've connected everything to the appropriate places. It's time to do the coding.
 
 Coding:
 
-Once you've imported DistanceSensor PMWLED and sleep all you need to do is set up your sensor = DistanceSensor (Echo, trigger and max_distance vary based on needs/location on the Pi)
+Once you've imported DistanceSensor PMWLED and sleep all you need to do is set up your sensor = DistanceSensor (Echo, trigger and max_distance vary based on needs/location on the Pi and what you wish to set the distance to.)
 
 Then you create a simple while loop, stating while True the following things occur.
 
