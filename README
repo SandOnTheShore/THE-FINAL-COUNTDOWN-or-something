@@ -1,6 +1,6 @@
 Hello!
 
-The purpose of this project is to create a sensor that displays a different light pattern depending on the distance an object is, within a certain range.
+The purpose of this project is to create a sensor that displays a different light pattern depending on the distance an object is, within a certain range. Off when the target is too far away, on when they're close and pulsing when they're extremely close.
 
 PI/Breadboard setup:
 
@@ -52,6 +52,8 @@ If distance is greater than 10 centimeters but less than 20 centimeters than the
 If the distance is less than 5 centimeters it begins to pulse
 
 Finally if it's greater than 20 centimeters away than it is off entirely.
+
+The sleep is used ensure the system doesn't process it too fast.
 
 
 USES:
