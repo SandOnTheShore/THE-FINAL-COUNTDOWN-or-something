@@ -15,6 +15,20 @@ while True:
     sleep(0.25)
 
 
+PI/Breadboard setup:
+
+You will need ONE ultrasonic distance sensor, TWO ground wires, FOUR normal wires, THREE resistors and ONE light.
+
+Set up your light towards one of the four courners of the breadboard and connect the necessary wiring according to the ultrasonic distance sensors needs.
+
+You'll also need one resistor, one normal wire and one ground wire for the light.
+
+After you've connected everything to the appropriate places. It's time to do the coding.
+
+Coding:
+
+
+
 
 USES:
 
