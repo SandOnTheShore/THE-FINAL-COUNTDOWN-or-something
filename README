@@ -1,6 +1,5 @@
 from gpiozero import DistanceSensor, PWMLED
 from time import sleep
-from signal import pause
 
 sensor = DistanceSensor(echo=23, trigger=24, max_distance=2.0)
 
@@ -27,7 +26,15 @@ After you've connected everything to the appropriate places. It's time to do the
 
 Coding:
 
+Once you've imported DistanceSensor PMWLED and sleep all you need to do is set up your sensor = DistanceSensor (Echo, trigger and max_distance vary based on needs/location on the Pi)
 
+Then you create a simple while loop, stating while True the following things occur.
+
+If distance is greater than 10 centimeters but less than 20 centimeters than the light is on.
+
+If the distance is less than 5 centimeters it begins to pulse
+
+Finally if it's greater than 20 centimeters away than it is off entirely.
 
 
 USES:
